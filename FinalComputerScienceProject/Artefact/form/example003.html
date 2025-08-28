@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Points Calculator</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <table>
+            <thead>
+                <td> Subject </td>
+                <td> Level </td>
+                <td> Grade </td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <label for="Subject1">Subject 1:</label>
+                        <input type="text" id="subject1" name="subject1">
+                    </td>
+                    <td> 
+                        <input type="radio" id="higher1" name="sub1" value="True">
+                        <label for="higher1">Higher</label><br>
+                        <input type="radio" id="ordinary1" name="sub1" value="False">
+                        <label for="ordinary1">Ordinary</label><br>
+                    </td>
+                    <td>
+                        <label for="grade1"></label>
+                        <input type="number" id="grade1" name="grade1" min="1" max="7" value ="1">
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="Subject2">Subject 2:</label>
+                        <input type="text" id="subject2" name="subject2"></td>
+                    <td> 
+                        <input type="radio" id="higher2" name="sub2" value="True">
+                        <label for="higher2">Higher</label><br>
+                        <input type="radio" id="ordinary2" name="sub2" value="False">
+                        <label for="ordinary2">Ordinary</label><br>
+                    </td>
+                    <td>
+                        <label for="grade2"></label>
+                        <input type="number" id="grade2" name="grade2" min="1" max="7" value ="1">
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="Subject3">Subject 3:</label>
+                        <input type="text" id="subject3" name="subject3"></td>
+                    <td> 
+                        <input type="radio" id="higher3" name="sub3" value="True">
+                        <label for="higher3">Higher</label><br>
+                        <input type="radio" id="ordinary3" name="sub3" value="False">
+                        <label for="ordinary2">Ordinary</label><br>
+                    </td>
+                    <td>
+                        <label for="grade3"></label>
+                        <input type="number" id="grade3" name="grade3" min="1" max="7" value ="1">
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="Subject4">Subject 4:</label>
+                        <input type="text" id="subject4" name="subject4"></td>
+                    <td> 
+                        <input type="radio" id="higher4" name="sub4" value="True">
+                        <label for="higher4">Higher</label><br>
+                        <input type="radio" id="ordinary4" name="sub4" value="False">
+                        <label for="ordinary2">Ordinary</label><br>
+                    </td>
+                    <td>
+                        <label for="grade4"></label>
+                        <input type="number" id="grade4" name="grade4" min="1" max="7" value ="1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> <label for="Subject5">Subject 5:</label>
+                        <input type="text" id="subject5" name="subject5"></td>
+                    <td> 
+                        <input type="radio" id="higher5" name="sub5" value="True">
+                        <label for="higher5">Higher</label><br>
+                        <input type="radio" id="ordinary5" name="sub5" value="False">
+                        <label for="ordinary5">Ordinary</label><br>
+                    </td>
+                    <td>
+                        <label for="grade5"></label>
+                        <input type="number" id="grade5" name="grade5" min="1" max="7" value ="1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> <label for="Subject6">Subject 6:</label>
+                        <input type="text" id="subject6" name="subject6"></td>
+                    <td> 
+                        <input type="radio" id="higher6" name="sub6" value="True">
+                        <label for="higher6">Higher</label><br>
+                        <input type="radio" id="ordinary6" name="sub6" value="False">
+                        <label for="ordinary6">Ordinary</label><br>
+                    </td>
+                    <td>
+                        <label for="grade6"></label>
+                        <input type="number" id="grade6" name="grade6" min="1" max="7" value ="1">
+                    </td>
+                </tr>
+            </tbody>
+                
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+

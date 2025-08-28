@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Computer Science Project
+        </title>
+        <h1>Computer Science Project</h1>
+    </head>
+    <body>
+        <h2>1. Meeting the brief </h2>
+        <p>BR1a: For this project, I used the leaving cert points statistics from the years 2018 to 2024 from the <a href="https://www.cao.ie/index.php?page=points">Central Applications Office (CAO)</a> website. </p>
+        <p>BR1b: I imported pandas into the Python code. I created functions that clean the data for a given year, take in the file path as an argument, import the data as a dataframe and remove unwanted characters, such as commas and percentage signs. The last function saves this dataframe as a new file. </p>
+        <p>BR2a: Using Python, Plotly and Pandas, I created histograms to show the frequencies of the points ranges. I created line graphs to display the means, modes, and medians for every year. I created functions to draw the histograms and ran the function for every year. </p>
+        <p>BR2b: In the histograms, the X-axis displays the point ranges, and the Y-axis displays the frequencies that these ranges were earned. In the line graph, the X-axis represents each year in the database, and the Y-axis represents the mean, mode, and median points earned each year. </p>
+        <p>BR2c: “makeStats” function is responsible for returning the mean, mode, and median for a particular year as a dictionary. This function is then repeated for every year. </p>
+        <p>BR3a: I created a webpage to display text and the graphs. The home page contains information in relation to the graphs, discussing the impacts Covid-19 had on Leaving Cert points. </p>
+        <p>BR3b: The home page contains all the data presented in pairs of histograms (Fig.1 – Fig.7) and a line graph (Fig.8) below the histograms.  </p>
+        <p>AR1: Plotly allows the user to interact with these visualisations. The user can hover over the graphs for more information, and they are able to zoom into each of the graphs for something specific. </p>
+        <p>AR2a: I created a separate webpage where six subjects are inputted for recommendations. These include the subject name as a string, the level as a Boolean, and a grade as an integer. </p>
+        <p>AR2b: This data is validated and stored in “subjectData.csv”, which confirms the use of three different data types. </p>
+        <p>AR2c: A record of previous inputs is stored and when inputting a subject name, those inputs may appear underneath the text box as suggested answers. </p>
+        <p>AR3: After the user inputs the data, the webpage will make a suggestion based on the number of points they scored. This keeps in mind of the level of each subject and their grade. </p>
+        <h2>2. Investigation</h2>
+        <p>Ever since the Covid-19 pandemic began, many people had noticed that students were scoring considerably higher in their Leaving Certs than they had prior to 2020. There are a few reasons for this. One reason is that many subjects had received a cut in the exam length, such as one less essay in the Politics and Society examination. Another reason is inflation points, which were meant to make up for learning difficulties during the pandemic. Many students also received a predicted grade rather than sitting the exam for real. Predicted grades were used during Covid times to give a prediction of what a student would have done in their Leaving Cert if they actually sat the exam. The prediction was made by their teachers. Whilst it was an effective work around for the time, it did introduce bias to the results, which was likely to result in higher grades on average. All these factors resulted in students seeming to score higher grades across all subjects, leading to receiving higher points. Hearing about this, I was interested in discovering for myself if there really was an increase in Leaving Cert points over the last five years, or whether it only assisted in maintaining the same average points as prior to 2020. </p>
+        <p>For this analysis, I decided to look at the <a href="https://www.cao.ie">Central Applications Office (CAO)</a> website to see if they had included any statistics that may be able to help me for this analysis. Luckily, I was able to find data on the number of students that earned a particular range for a given year. I found this by clicking on “Media and Statistics” on the homepage. From there, I clicked on “Points by year and Leaving Certificate points statistics”, which brought me to a webpage that let me pick a year to view the Leaving Cert points statistics for that given year. </p>
+        <p>I also used <a href = "https://careersportal.ie/courses/calculator/pointsCalculator.html">Careers Portals CAO points calculator</a> for comparison. However, you need prior knowledge of the mean, so it does not make any real-world comparisons. There is scope for a points calculator to communicate to the user how well they are doing relative to others. This could easily be achieved by comparing the user’s score to the median score of the previous year. </p>
+        <h2>3. Planning and design</h2>
+        <p>I will locate a data set online that contains information about how many students sat the Leaving Cert in every year from 2018 to 2024 and the frequencies of the points earned each year. </p>
+        <p>I will download these data sets onto my computer in the form of comma separated variable files. </p>
+        <p>In Visual Studio Code (VS Code), I will use Python and the Pandas module in Python to clean up this data to allow Microsoft Excel to read the data easier. This helps since the original data set contains a lot of words not useful in the analysis. </p>
+        <p>I will use a separate Python programme to calculate the means, modes, and medians for every year. These figures will be used in my analysis and in my webpage </p>
+        <p>Using this information as well as Plotly, I will create histograms showing the frequencies of student’s scores for each year. The point ranges will be the X-axis, and frequency will be the Y-axis. Using the averages, I will create a line graph that displays the means, modes, and medians for every year. I will then save these graphs on my computer for them to be used in my webpage. The X-axis will be used for years, and the Y-axis is used for all the averages. </p>
+        <p>I will use VS Code and HTML to create a homepage consisting of the graphs I have downloaded onto my computer. This webpage will also include text which refers to the graphs, containing information about the graphs and about the means, modes, and medians of each year. </p>
+        <p>Plotly will allow the user to interact with the data visualisations, allowing to hover over the graph to see more information, and to zoom into a particular part of the graph for more specific detail. </p>
+        <p>I will create a separate HTML webpage using VS Code to create a form that will collect and store data from the users. It will take in six subjects, their levels, and their grades to calculate the points earned by the user. This will include three data types, including strings for the name of the subject, Booleans for the level, and integers for the grade. </p>
+        <p>Using this information, the webpage will calculate the points earned by the user, considering of grades and levels. </p>
+        <p>The computer will suggest to the user based on the points earned and the average points earned in 2024. </p>
+        <a> <img src="flowchart.png" width = "35%"></a>
+        <h2>4. Create</h2>
+        <p>Weekly Log</p>
+        <p>Week 1 - 2nd December</p>
+        <ul>
+            <li>Read over project brief </li>
+            <li>Wrote down what I wanted to find out for this project </li>
+            <li>Searched the web for suitable data sets </li>
+        </ul>
+        <p>Week 2 - 9th December</p>
+        <ul>
+            <li>Continued searching for data set until I came across CAO Leaving Cert Point Statistics. </li>
+            <li>I decided to use this for my analysis due to the large amount of useful data. </li>
+            <li>I downloaded these files onto my computer for easy access and to set up for cleaning the datasets later. </li>
+            <li>I updated applications I will use for this project such as VS Code to ensure the applications run smoothly for the project. </li>
+        </ul>
+        <p>Week 3 - 16th December</p>
+        <ul>
+            <li>Christmas Exams</li>
+            <li>I was unable to continue the project at this due to being out of class.</li>
+        </ul>
+        <p>Week 4 - 23rd December</p>
+        <ul>
+            <li>Christmas break</li>
+            <li>Practiced Python for when I get back to school to work on the project.</li>
+        </ul>
+        <p>Week 5 - 30th December</p>
+        <ul>
+            <li>Christmas break</li>
+            <li>I practiced HTML and JavaScript to help me when creating the webpages for my project.</li>
+        </ul>
+        <p>Week 6 - 6th January</p>
+        <ul>
+            <li>Began the write up for my project in HTML, I wrote how I was to meet the brief, my investigation into finding a data set, and my plan for completing this project.</li>
+            <li>Began working on Python code using VS code to meet the first basic requirement.</li>
+            <li>I imported Pandas to do this but had to follow tutorials online for how to use Pandas properly.</li>
+            <li>I had a lot of trouble getting the dataset to clean properly as it kept grouping pieces of data that I wanted separate.</li>
+        </ul>
+        <p>Week 7 - 13th January</p>
+        <ul>
+            <li>After a few days, I learnt how to use Pandas as intended.</li>
+            <li>Using this knowledge, I successfully cleaned the dataset for 2018</li>
+            <li>I saved this file as "clean_data_2018.csv" to distinguish it from the raw data file.</li>
+            <li>I wrote a "for" loop to repeat this action for every year.</li>
+            <li>I began some work on the second basic requirement, feeling overwhelmed about this step.</li>
+            <li>I began by importing Pandas and Matplotlib for drawing and saving the graphs.</li>
+        </ul>
+        <p>Week 8 - 20th January</p>
+        <ul>
+            <li>I continued to work on the second basic requirement.</li>
+            <li>I was successful in creating the graphs and saving them to the computer, very happy with the results Matplotlib created</li>
+            <li>I kept working on the write up to remember the progress I had made up to this point.</li>
+        </ul>
+        <p>Week 9 - 27th January</p>
+        <ul>
+            <li>I began to work on the third basic requirement until I realised that the graphs did not include any interactive elements in them to meet the first advanced requirement.</li>
+            <li>This caused me to panic until I realised that using Plotly instead Matplotlib would allow for the user to interact with the graphs.</li>
+            <li>Thus, I rewrote the second basic requirement to use Plotly instead of Matplotlib.</li>
+            <li>Whilst annoying, it met the first advanced requirement.</li>
+            <li>Afterwards, I returned to work on the third basic requirement.</li>
+        </ul>
+        <p>Week 10 - 3rd February</p>
+        <ul>
+            <li>Pre exams</li>
+            <li>I did not do any work towards the project for a few weeks due to having no classes</li>
+        </ul>
+        <p>Week 11 - 10th February</p>
+        <ul>
+            <li>Pre exams</li>
+            <li>Had Computer Science exam this week, so I was able to practice Python, even if it was completely unrelated to the project.</li>
+        </ul>
+        <p>Week 12 - 17th February</p>
+        <ul>
+            <li>Midterm break</li>
+            <li>I spent a couple of hours doing practice challenges in Python using VS Code. </li>
+        </ul>
+        <p>Week 13 - 24th February</p>
+        <ul>
+            <li>I took this week to create the main webpage</li>
+            <li>Despite a small bit of trouble adding the graphs to the webpage, I found this part of the project less stressful and faster.</li>
+            <li>I wrote information to go alongside the graphs.</li>
+            <li>I added to my write up, particularly with the weekly log</li>
+            <li>So far, I have met all the basic requirements and one of the advanced requirements.</li>
+        </ul>
+        <p>Week 14 - 3rd March</p>
+        <ul>
+            <li>I began writing code to work towards the second advanced requirement.</li>
+            <li>Creating the webpage and the code to load the webpage was relatively painless and only took two classes to complete.</li>
+            <li>Began work on the advanced requirement, which I am hoping will also be easy.</li>
+        </ul>
+        <p>Week 15 - 10th March</p>
+        <ul>
+            <li>I had not read the brief in a while and forgot that I would need three data types instead of two. I had initially created a webpage for six subjects, their levels, and grades. The subjects and grades were both stored as strings and the grade was stored as an integer.</li>
+            <li>This was a significant problem, as I would need to rework how the program calculates points both on Python and HTML.</li>
+            <li>I initially tried to change the values or Python and HTML as True and False instead of "H" (Higher) and "O" (Ordinary) but realised that True and False needed to be in quotation marks for HTML.</li>
+        </ul>
+        <p>Week 16 - 17th March</p>
+        <ul>
+            <li>I realised that it will still work if True and False if they have quotation marks in HTML.</li>
+            <li>Despite this, I ran into a problem with the code not properly calculating the grades, always giving 0 points, or else giving a "UFuncTypeError".</li>
+            <li>Thankfully, just at the neck of time, I found the solution to the problem and the code was working as intended.</li>
+        </ul>
+        <a> <img src="python1.png" width = "30%"></a>
+        <p>This is found in the app2.py file and was what I needed to change to convert a Boolean taken in the webpage into a string that could be interpreted in the “if” statement later. I needed the Boolean to address the first advanced requirement. If the student is doing a higher level subject, the Boolean will be True, and if the student is doing ordinary level, the Boolean will be false. This is a false simulation however, as there is a potential for a foundation level in some subjects and therefore limits the project but satisfies the first Advanced Requirement. </p>
+        <a> <img src="python2.png" width = "20%"></a>
+        <p>The purpose of the above code is to find the location of the median. I simulated testing various data frame columns over the span of a week starting on the 7th January. The results are contained in the following table.</p>
+        <table>
+        <table border>
+            <tr>
+                <th>Date</th>
+                <th>Input (Last Item in List)</th>
+                <th>Expected result</th>
+                <th>Result</th>
+                <th>Pass/Fail</th>
+                <th>Fixes</th>
+            </tr>
+            <tr>
+                <td>7/1/25</td>
+                <td>101</td>
+                <td>51</td>
+                <td>51.0</td>
+                <td>Pass</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>9/1/25</td>
+                <td>101.3</td>
+                <td>51</td>
+                <td>51.0</td>
+                <td>Pass</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>10/1/25</td>
+                <td>"101"</td>
+                <td>51</td>
+                <td>ValueError</td>
+                <td>Fail</td>
+                <td>Include int on line 3</td>
+            </tr>
+            <tr>
+                <td>14/1/25</td>
+                <td>"One-hundred and one"</td>
+                <td>51</td>
+                <td>ValueError</td>
+                <td>Fail</td>
+                <td>Introduce try and except functions</td>
+            </tr>
+        </table border>
+        </table>
+        <h2>5. Evaluation</h2>
+        <p>Overall, I am quite happy with how this project turned out as I was successful in conducting data analysis on something I was interested in finding out about for several years. It was also a great opportunity for me to learn about how to use the Pandas module in Python and I learnt why graphs are so vital for data analysis, instead of exclusively relying on spreadsheets to present data. I did find the process of adding a third data type later very frustrating, as if I had read the brief again, I would have been better equipped and would have initially created the code with this in mind. I also was annoyed at myself for not doing as much research into Matplotlib and Plotly as I wished, as needing to change this later was admittedly tedious. Despite this, I feel these annoyances were great learning experiences for going into software development later in college. </p>
+        <p>If I were to do this project again, I would pay considerably more attention to exactly what the brief asked me to do. I felt that not paying as much attention to what they asked me to do made me spend a lot of time trying to fix easy to avoid mistakes. Also, if there was something I would want to add to this project, it would be to consider special cases, such as in Higher Level Maths, where there is 25 bonus points, and Link Modules, which has a completely distinct grading system unlike most subject, and therefore, would reflect the real world much better. I would also have included a hyperlink on both webpages to easily get from one to the other. </p>
+        <h2>6. References</h2>
+        <p><a href =https://www.cao.ie>Central Applications Office</a> </p>
+        <p><a href =https://www.cao.ie/index.php?page=points>Central Applications Office - Leaving Cert Points Statistics</a> </p>
+        <p><a href =https://www.rte.ie/news/2025/0322/1503393-leaving-cert-increase>RTE news - Significant increase in number intending to sit Leaving Cert, data shows</a> </p>
+        <p><a href =https://www.examinations.ie>State Examinations Commission</a> </p>
+        <p><a href =https://careersportal.ie/courses/calculator/pointsCalculator.html>Careers Portal - CAO points calculator</a> </p>
+        <h2>7. Summary word count</h2>
+        <table>
+            <table border>
+                <tr>
+                    <th>Section</th>
+                    <th>Word Count</th>
+                </tr>
+                <tr>
+                    <td>1. Meeting the brief</td>
+                    <td>391</td>
+                </tr>
+                <tr>
+                    <td>2. Investigation</td>
+                    <td>375</td>
+                </tr>
+                <tr>
+                    <td>3. Plan and design</td>
+                    <td>396</td>
+                </tr>
+                <tr>
+                    <td>4. Create</td>
+                    <td>1038</td>
+                </tr>
+                <tr>
+                    <td>5. Evaluation</td>
+                    <td>279</td>
+                </tr>
+                <tr>
+                    <td>Total:</td>
+                    <td>2469</td>
+                </tr>
+            </table border>
+        </table>
+    </body>
+</html>

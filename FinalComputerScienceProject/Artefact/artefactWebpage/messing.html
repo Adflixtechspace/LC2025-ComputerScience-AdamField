@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Save Form Data to LocalStorage</title>
+</head>
+<body>
+  <form id="dataForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <button type="button" onclick="saveToLocalStorage()">Save Data</button>
+    <button type="button" onclick="loadFromLocalStorage()">Load Data</button>
+  </form>
+
+  <script>
+    function saveToLocalStorage() {
+      const form = document.getElementById('dataForm');
+      const formData = new FormData(form);
+      const data = {};
+
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+
+      localStorage.setItem('formData', JSON.stringify(data));
+      alert('Data saved to local storage!');
+    }
+
+    function loadFromLocalStorage() {
+      const storedData = localStorage.getItem('formData');
+      if (storedData) {
+        const data = JSON.parse(storedData);
+
+        for (const key in data) {
+          const input = document.querySelector(`[name="${key}"]`);
+          if (input) {
+            input.value = data[key];
+          }
+        }
+        alert('Data loaded from local storage!');
+      } else {
+        alert('No data found in local storage.');
+      }
+    }
+  </script>
+</body>
+</html>
